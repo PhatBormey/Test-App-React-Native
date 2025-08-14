@@ -1,32 +1,14 @@
-import { Text, View ,StyleSheet} from "react-native";
-export default function Index() {
+import { Text, View } from "react-native";
+import {styles} from "../assets/styles.js"
+import { Link } from "expo-router";
+
+const Index=()=> {
   return (
-    <View
-      style={styles.container}
-    >
+    <View style={styles.container}>
       <Text style={styles.text}>Hello World</Text>
+      <Link href={"/about"}>Click Me</Link>
     </View>
   );
-  
 }
-const colors={
-  primary:'#ffffff',
-  primary1:'#333333',
-  secondary:'#706C61',
-  secondary1:'#E1F4F3',
-}
-const styles=StyleSheet.create({
-    container:{
-      flex:1,
-      backgroundColor: colors.primary,
-      alignItems:'center',
-      justifyContent:'center'
-    },
-    text:{
-      color:colors.primary1,
-      fontSize:20,
-      fontWeight:'bold',
-      fontFamily:'times new roman'
-    }
-  });
+export default Index
  
