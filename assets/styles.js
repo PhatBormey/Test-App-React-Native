@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-export const colors={
+ const colors={
   primary:'#ffffff',
   primary1:'#333333',
   secondary:'#706C61',
@@ -17,5 +17,12 @@ export const styles=StyleSheet.create({
       fontSize:20,
       fontWeight:'bold',
       fontFamily:'times new roman'
+    },
+    button:{
+      color:colors.primary,
+      backgroundColor:colors.secondary,
+      padding:10,
+      borderRadius:10,
+      textAlign:"center",
     }
   });

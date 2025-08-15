@@ -1,10 +1,10 @@
 
-import { Stack } from "expo-router";
-export default function RootLayout() {
+import { Tabs } from "expo-router";
+export default function TabLayout() {
   return (
-    <Stack>
-      <Stack.Screen
-        name="(tab)"
+    <Tabs>
+      <Tabs.Screen
+        name="index"
         options={{
           headerTitle:"TRUE VISION",
           headerTitleAlign:"center",
@@ -13,13 +13,25 @@ export default function RootLayout() {
             fontFamily:"times new roman",
             fontSize:20,
             fontWeight:"bold"
-          },
-          headerLeft:()=><></>,
-          headerShown:false,
+          }
         }}
       >
-      </Stack.Screen>
-      <Stack.Screen
+      </Tabs.Screen>
+      <Tabs.Screen
+        name="about"
+        options={{
+          headerTitle:"About Me",
+          headerTitleAlign:"center",
+           headerTitleStyle:{
+            color:"#333333",
+            fontFamily:"times new roman",
+            fontSize:20,
+            fontWeight:"bold"
+          }
+        }}
+      >
+      </Tabs.Screen>
+      <Tabs.Screen
         name="+not-found"
         options={{
           headerTitle:"Not Found",
@@ -32,7 +44,7 @@ export default function RootLayout() {
           }
         }}
       >
-      </Stack.Screen>
-    </Stack>
+      </Tabs.Screen>
+    </Tabs>
   );
 }
